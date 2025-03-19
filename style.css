@@ -132,3 +132,45 @@ h2 {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgb(0, 0, 0, 0.15);
 }
+
+.gallery {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+}
+
+.image-track {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 80%;
+}
+
+.image-track img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.image-track img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6 15px rgba(0, 0, 0, 0.15);
+}
