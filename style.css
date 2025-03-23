@@ -151,6 +151,23 @@ h2 {
     max-width: 100%;
 }
 
+.gallery-container button {
+    background-color: #4fa0fc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.gallery-container button:hover {
+    background-color: #3a7ecf;
+}
+
+
+
 .image-track {
     display: flex;
     gap: 10px;
