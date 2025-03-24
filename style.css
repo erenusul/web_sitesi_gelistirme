@@ -191,3 +191,15 @@ h2 {
     transform: scale(1.05);
     box-shadow: 0 6 15px rgba(0, 0, 0, 0.15);
 }
+
+#prevBtn {
+    position: absolute;
+    left: 10px;
+    z-index: 10;
+}
+
+#nextBtn {
+    position: absolute;
+    right: 10px;
+    z-index: 10;
+}
