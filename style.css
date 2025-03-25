@@ -176,6 +176,7 @@ h2 {
     scrollbar-width: none;
     -ms-overflow-style: none;
     width: 80%;
+    cursor: grab;
 }
 
 .image-track img {
@@ -183,8 +184,14 @@ h2 {
     height: 150px;
     object-fit: cover;
     border-radius: 8px;
+    padding: 5px;
+    background-color: #f8f8f8;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
+}
+
+.image-track::webkit_scrollbar {
+    display: none;
 }
 
 .image-track img:hover {
@@ -192,14 +199,27 @@ h2 {
     box-shadow: 0 6 15px rgba(0, 0, 0, 0.15);
 }
 
-#prevBtn {
-    position: absolute;
-    left: 10px;
-    z-index: 10;
+.custom-scrollbar {
+    width: 80%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    position: relative;
+    margin: 10px auto 0;
+    cursor: pointer;
 }
 
-#nextBtn {
+.scrollbar-thumb {
+    width: 20%;
+    height: 100%;
+    background: #4fa0fc;
+    border-radius: 4px;
     position: absolute;
-    right: 10px;
-    z-index: 10;
+    left: 0;
+    transition: 0.3s;
+    cursor: grab;
+}
+
+.scrollbar-thumb:active {
+    cursor: grabbing;
 }
