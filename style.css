@@ -223,3 +223,80 @@ h2 {
 .scrollbar-thumb:active {
     cursor: grabbing;
 }
+
+/* Varsayılan (Masaüstü ve Büyük Ekranlar) */
+.image-track img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Mobil ve Tablet Ekranları */
+@media (max-width: 1024px) {
+    .gallery-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .image-track {
+        width: 90%;
+        gap: 5px;
+    }
+
+    .image-track img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .custom-scrollbar {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 30px 10px;
+    }
+
+    .gallery-container {
+        gap: 3px;
+    }
+
+    .image-track img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .custom-scrollbar {
+        width: 85%;
+        height: 6px;
+    }
+
+    .scrollbar-thumb {
+        width: 25%;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-track {
+        width: 95%;
+        gap: 2px;
+    }
+
+    .image-track img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .custom-scrollbar {
+        width: 80%;
+        height: 5px;
+    }
+
+    .scrollbar-thumb {
+        width: 30%;
+    }
+}
