@@ -224,7 +224,7 @@ h2 {
     cursor: grabbing;
 }
 
-/* Varsayılan (Masaüstü ve Büyük Ekranlar) */
+
 .image-track img {
     width: 200px;
     height: 200px;
@@ -234,7 +234,7 @@ h2 {
     cursor: pointer;
 }
 
-/* Mobil ve Tablet Ekranları */
+
 @media (max-width: 1024px) {
     .gallery-container {
         flex-direction: column;
@@ -299,4 +299,24 @@ h2 {
     .scrollbar-thumb {
         width: 30%;
     }
+}
+
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.image-container:hover .overlay-text {
+    background: rgba(0, 0, 0, 0.7);
 }
