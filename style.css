@@ -321,3 +321,23 @@ h2 {
 .image-container:hover .overlay-text {
     background: rgba(0, 0, 0, 0.7);
 }
+
+.mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #4fa0fc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.mode-toggle:hover {
+    background-color: #3a7ecf;
+}
