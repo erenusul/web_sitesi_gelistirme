@@ -36,3 +36,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateThumbPosition();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("mode-toggle");
+    const body = document.body;
+
+    // Geçerli tema kontrolü (localStorage)
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        toggleBtn.textContent = "☀️ Light Mode";
+    }
+
+    toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        const isDark = body.classList.contains("dark-mode");
+        toggleBtn.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+});
+
