@@ -302,21 +302,29 @@ h2 {
     }
 }
 
-
 .overlay-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 160px;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+
+    color: transparent;
+    -webkit-text-stroke: 3px white;
+    /* Dış hatları belirginleştiriyoruz */
+    text-shadow: none;
+
     background: none;
-    color: white;
-    font-size: 200px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-align: center;
-    transition: 0.3s ease-in-out;
+    padding: 0;
+    border: none;
+    z-index: 2;
+    pointer-events: none;
 }
+
+
+
 
 .image-container:hover .overlay-text {
     background: rgba(0, 0, 0, 0.7);
@@ -368,8 +376,10 @@ body.dark-mode .project-card2:hover {
 }
 
 body.dark-mode .overlay-text {
-    color: #e0e0e0;
-    text-shadow: 0 0 5px #000;
+    color: transparent;
+    /* İç kısmı yine boş kalsın */
+    -webkit-text-stroke: 3px white;
+    text-shadow: none;
 }
 
 body.dark-mode .image-track img {
