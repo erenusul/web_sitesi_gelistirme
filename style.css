@@ -307,13 +307,15 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 160px;
+    font-size: clamp(32px, 12vw, 150px);
+    /* RESPONSIVE font boyutu */
     font-weight: 900;
     font-family: 'Poppins', sans-serif;
 
+    white-space: nowrap;
+    /* Yazı asla alt satıra inmesin */
     color: transparent;
     -webkit-text-stroke: 3px white;
-    /* Dış hatları belirginleştiriyoruz */
     text-shadow: none;
 
     background: none;
@@ -322,6 +324,7 @@ h2 {
     z-index: 2;
     pointer-events: none;
 }
+
 
 
 
@@ -393,4 +396,50 @@ body.dark-mode .mode-toggle {
 
 body.dark-mode .mode-toggle:hover {
     background-color: #555;
+}
+
+.overlay-text span {
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(30px);
+    animation: slideIn 0.6s forwards;
+}
+
+.overlay-text span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.overlay-text span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.overlay-text span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.overlay-text span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.overlay-text span:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.overlay-text span:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.overlay-text span:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.overlay-text span:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
