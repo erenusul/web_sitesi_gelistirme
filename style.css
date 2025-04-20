@@ -53,9 +53,7 @@ section img {
     transition: transform 0.4s ease-in-out;
 }
 
-section img:hover {
-    /* transform: scale(1.01); */
-}
+section img:hover {}
 
 img {
     width: 100%;
@@ -308,12 +306,12 @@ h2 {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: clamp(32px, 12vw, 150px);
-    /* RESPONSIVE font boyutu */
+
     font-weight: 900;
     font-family: 'Poppins', sans-serif;
 
     white-space: nowrap;
-    /* Yazı asla alt satıra inmesin */
+
     color: transparent;
     -webkit-text-stroke: 3px white;
     text-shadow: none;
@@ -380,7 +378,7 @@ body.dark-mode .project-card2:hover {
 
 body.dark-mode .overlay-text {
     color: transparent;
-    /* İç kısmı yine boş kalsın */
+
     -webkit-text-stroke: 3px white;
     text-shadow: none;
 }
@@ -442,4 +440,27 @@ body.dark-mode .mode-toggle:hover {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: #4fa0fc;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+    background-color: #3a7ecf;
+    transform: scale(1.1);
 }
