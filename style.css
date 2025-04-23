@@ -521,3 +521,11 @@ body.dark-mode .mode-toggle:hover {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
 }
+
+.project-card:hover,
+.project-card2:hover,
+.scroll-top-btn:hover,
+.mode-toggle:hover {
+    box-shadow: 0 0 20px rgba(79, 160, 252, 0.6), 0 0 30px rgba(79, 160, 252, 0.4);
+    transition: box-shadow 0.3s ease-in-out;
+}
