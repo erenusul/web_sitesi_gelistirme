@@ -529,3 +529,33 @@ body.dark-mode .mode-toggle:hover {
     box-shadow: 0 0 20px rgba(79, 160, 252, 0.6), 0 0 30px rgba(79, 160, 252, 0.4);
     transition: box-shadow 0.3s ease-in-out;
 }
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #4fa0fc;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    padding: 10px 0;
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marqueeAnim 15s linear infinite;
+    font-size: 16px;
+    padding-left: 100%;
+}
+
+@keyframes marqueeAnim {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
