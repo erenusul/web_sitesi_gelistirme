@@ -99,5 +99,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const overlayText = document.querySelector('.overlay-text');
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 100) {
+            overlayText.classList.add('shrink');
+        } else {
+            overlayText.classList.remove('shrink');
+        }
+    });
+});
+
+
 
 
