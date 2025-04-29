@@ -103,11 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const overlayText = document.querySelector('.overlay-text');
 
     window.addEventListener('scroll', function () {
-        if (window.scrollY > 100) {
-            overlayText.classList.add('shrink');
-        } else {
-            overlayText.classList.remove('shrink');
-        }
+        const scrollTop = window.scrollY;
+        let scaleValue = Math.max(0.5, 1 - scrollTop / 600);
+        overlayText.style.transform = `translate(-50%, -50%) scale(${scaleValue})`;
     });
 });
 
