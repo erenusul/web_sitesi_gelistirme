@@ -53,7 +53,7 @@ section img {
     transition: transform 0.4s ease-in-out;
 }
 
-section img:hover {}
+
 
 img {
     width: 100%;
@@ -455,6 +455,12 @@ body.dark-mode .overlay-text span {
     }
 }
 
+.scroll-top-btn i {
+    color: white;
+    font-size: 20px;
+}
+
+
 .scroll-top-btn {
     position: fixed;
     bottom: 80px;
@@ -462,7 +468,7 @@ body.dark-mode .overlay-text span {
     width: 50px;
     height: 50px;
     font-size: 24px;
-    background-color: #4fa0fc;
+    background-color: rgba(79, 160, 252, 0.6);
     color: white;
     border: none;
     border-radius: 50%;
@@ -473,10 +479,12 @@ body.dark-mode .overlay-text span {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+
 .scroll-top-btn:hover {
-    background-color: #3a7ecf;
+    background-color: rgba(79, 160, 252, 0.9);
     transform: scale(1.1);
 }
+
 
 .lightbox {
     display: none;
@@ -611,17 +619,98 @@ body.dark-mode .overlay-text span {
 
 @keyframes pulseGlow {
     0% {
-        text-shadow: 0 0 5px rgba(79, 160, 252, 0.4),
-            0 0 10px rgba(79, 160, 252, 0.3);
+        text-shadow:
+            0 0 5px rgba(79, 160, 252, 0.3),
+            0 0 10px rgba(79, 160, 252, 0.2);
+        transform: scale(1);
     }
 
     50% {
-        text-shadow: 0 0 20px rgba(79, 160, 252, 0.8),
-            0 0 30px rgba(79, 160, 252, 0.6);
+        text-shadow:
+            0 0 25px rgba(79, 160, 252, 0.8),
+            0 0 40px rgba(79, 160, 252, 0.6);
+        transform: scale(1.05);
     }
 
     100% {
-        text-shadow: 0 0 5px rgba(79, 160, 252, 0.4),
-            0 0 10px rgba(79, 160, 252, 0.3);
+        text-shadow:
+            0 0 5px rgba(79, 160, 252, 0.3),
+            0 0 10px rgba(79, 160, 252, 0.2);
+        transform: scale(1);
     }
+}
+
+.about {
+    background-color: #ffffff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+
+
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+.about h2 {
+    font-size: 28px;
+    color: #4fa0fc;
+    margin-bottom: 15px;
+}
+
+.about-text {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    white-space: pre-line;
+    max-height: 250px;
+
+    overflow: hidden;
+}
+
+.about-text em {
+    display: block;
+    margin-top: 15px;
+    color: #888;
+    font-style: italic;
+}
+
+.about {
+    position: relative;
+    overflow: hidden;
+}
+
+.about .icon {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.icon-top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.icon-top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.icon-bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.icon-bottom-right {
+    bottom: 10px;
+    right: 10px;
 }
