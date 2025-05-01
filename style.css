@@ -589,10 +589,11 @@ body.dark-mode .overlay-text span {
 }
 
 .overlay-text span {
+
     display: inline-block;
     transition: all 0.3s ease-in-out;
     pointer-events: auto;
-    cursor: default;
+    animation: pulseGlow 3s ease-in-out infinite;
 }
 
 
@@ -606,4 +607,21 @@ body.dark-mode .overlay-text span {
 .shrink {
     transform: translate(-50%, -50%) scale(0.6);
     transition: transform 0.3s ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(79, 160, 252, 0.4),
+            0 0 10px rgba(79, 160, 252, 0.3);
+    }
+
+    50% {
+        text-shadow: 0 0 20px rgba(79, 160, 252, 0.8),
+            0 0 30px rgba(79, 160, 252, 0.6);
+    }
+
+    100% {
+        text-shadow: 0 0 5px rgba(79, 160, 252, 0.4),
+            0 0 10px rgba(79, 160, 252, 0.3);
+    }
 }
