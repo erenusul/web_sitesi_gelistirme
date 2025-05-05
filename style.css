@@ -336,6 +336,12 @@ h2 {
     }
 }
 
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
 
 .image-container:hover .overlay-text {
     background: rgba(0, 0, 0, 0.7);
