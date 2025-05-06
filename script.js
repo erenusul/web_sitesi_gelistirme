@@ -126,4 +126,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("popupMessage");
+    const detail = document.getElementById("popupDetail");
+
+    setTimeout(() => {
+        popup.classList.add("show");
+
+        setTimeout(() => {
+            if (!detail.classList.contains("visible")) {
+                popup.classList.remove("show");
+            }
+        }, 5000);
+    }, 5000);
+
+    popup.addEventListener("click", () => {
+        if (detail.style.display === "block") {
+            detail.style.display = "none";
+            detail.classList.remove("visible");
+        } else {
+            detail.style.display = "block";
+            detail.classList.add("visible");
+        }
+    });
+});
 
