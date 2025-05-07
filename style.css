@@ -471,37 +471,6 @@ body.dark-mode .overlay-text span {
     }
 }
 
-.scroll-top-btn i {
-    color: white;
-    font-size: 20px;
-}
-
-
-.scroll-top-btn {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    background-color: rgba(79, 160, 252, 0.6);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    z-index: 999;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-
-.scroll-top-btn:hover {
-    background-color: rgba(79, 160, 252, 0.9);
-    transform: scale(1.1);
-}
-
-
 .lightbox {
     display: none;
     position: fixed;
@@ -561,7 +530,6 @@ body.dark-mode .overlay-text span {
 
 .project-card:hover,
 .project-card2:hover,
-.scroll-top-btn:hover,
 .mode-toggle:hover {
     box-shadow: 0 0 20px rgba(79, 160, 252, 0.6), 0 0 30px rgba(79, 160, 252, 0.4);
     transition: box-shadow 0.3s ease-in-out;
@@ -737,45 +705,36 @@ body.dark-mode .overlay-text span {
     right: 20px;
     background-color: #4fa0fc;
     color: white;
-    padding: 12px 18px;
+    padding: 18px 18px 12px 18px;
     border-radius: 10px;
     font-size: 14px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
-
-    pointer-events: auto;
+    max-width: 280px;
     z-index: 9999;
-    cursor: pointer;
 }
-
-
 
 .popup-message.show {
     opacity: 1;
     transform: translateY(0);
-    pointer-events: auto;
 }
 
-.popup-detail {
-    margin-top: 10px;
-    background-color: rgba(255, 255, 255, 0.95);
-    color: #333;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 13px;
-    text-align: left;
-    display: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 22px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1;
 }
 
-.popup-detail ul {
-    list-style: none;
-    padding: 0;
-    margin: 5px 0 0 0;
-}
-
-.popup-detail li {
-    margin: 4px 0;
+.close-btn:hover {
+    color: #ffdddd;
+    transform: scale(1.1);
 }

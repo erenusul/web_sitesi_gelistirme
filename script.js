@@ -56,25 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-            scrollTopBtn.style.display = "block";
-        } else {
-            scrollTopBtn.style.display = "none";
-        }
-    });
-
-    scrollTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
     const galleryImages = document.querySelectorAll(".image-track img");
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
@@ -130,15 +111,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("popupMessage");
     const detail = document.getElementById("popupDetail");
 
-    setTimeout(() => {
-        popup.classList.add("show");
 
-        setTimeout(() => {
-            if (!detail.classList.contains("visible")) {
-                popup.classList.remove("show");
-            }
-        }, 5000);
-    }, 5000);
+    popup.classList.add("show");
+
+
+    setTimeout(() => {
+        if (!detail.classList.contains("visible")) {
+            popup.classList.remove("show");
+        }
+    }, 10000);
+
 
     popup.addEventListener("click", () => {
         if (detail.style.display === "block") {
@@ -149,5 +131,11 @@ document.addEventListener("DOMContentLoaded", function () {
             detail.classList.add("visible");
         }
     });
+});
+
+const closeBtn = document.getElementById("popupClose");
+
+closeBtn.addEventListener("click", () => {
+    document.getElementById("popupMessage").classList.remove("show");
 });
 
