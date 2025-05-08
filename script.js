@@ -135,7 +135,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const closeBtn = document.getElementById("popupClose");
 
-closeBtn.addEventListener("click", () => {
-    document.getElementById("popupMessage").classList.remove("show");
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const closeBtn = document.getElementById("popupClose");
+    const popup = document.getElementById("popupMessage");
 
+    closeBtn.addEventListener("click", function () {
+        popup.classList.remove("show");
+    });
+});
