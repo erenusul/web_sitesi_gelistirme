@@ -703,6 +703,69 @@ body.dark-mode .overlay-text span {
     position: fixed;
     bottom: 100px;
     right: 20px;
+    background-color: #eaf4ff;
+    /* açık mavi, daha yumuşak */
+    color: #222;
+    padding: 18px 20px 14px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.popup-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popup-detail {
+    margin-top: 10px;
+}
+
+.popup-detail ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+}
+
+.popup-detail li {
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.popup-detail a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.popup-detail a:hover {
+    text-decoration: underline;
+}
+
+.badge {
+    background-color: #4fa0fc;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* .popup-message {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
     background-color: #4fa0fc;
     color: white;
     padding: 20px 24px 16px 24px;
@@ -744,7 +807,7 @@ body.dark-mode .overlay-text span {
 .popup-message.show {
     opacity: 1;
     transform: translateY(0);
-}
+} */
 
 .close-btn {
     position: absolute;
