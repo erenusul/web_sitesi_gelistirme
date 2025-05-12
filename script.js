@@ -143,3 +143,25 @@ document.addEventListener("DOMContentLoaded", function () {
         popup.classList.remove("show");
     });
 });
+
+const testimonials = [
+    '"Tasarımlar harika, bayıldım!" – Güliz',
+    '"Kargom çok hızlı geldi!" – Ahmet',
+    '"Gerçekten enerjimi yükseltti!" – Nevin',
+    '"Kalite ve doğallık bir arada." – Kaan',
+    '"Bileklik beklediğimden daha güzelmiş!" – Eren'
+];
+
+let testimonialIndex = 0;
+const testimonialText = document.getElementById("testimonialText");
+
+setInterval(() => {
+    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+    testimonialText.style.opacity = 0;
+
+    setTimeout(() => {
+        testimonialText.textContent = testimonials[testimonialIndex];
+        testimonialText.style.opacity = 1;
+    }, 300);
+}, 4000);
+

@@ -826,3 +826,18 @@ body.dark-mode .overlay-text span {
     color: #ffdddd;
     transform: scale(1.1);
 }
+
+.testimonial-box {
+    max-width: 100%;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 12px 20px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+    border-top: 2px solid #4fa0fc;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+    transition: opacity 0.5s ease;
+}
