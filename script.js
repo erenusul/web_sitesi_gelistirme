@@ -178,7 +178,7 @@ const newItemSchema = new Schema({
 module.exports = mongoose.model('NewItem', newItemSchema);
 
 
-// server.js
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -200,16 +200,4 @@ app.get('/api/new-items', async (req, res) => {
 app.listen(3000, () => console.log('Sunucu 3000 portunda çalışıyor.'));
 
 
-fetch('http://localhost:3000/api/new-items')
-    .then(res => res.json())
-    .then(data => {
-        const detailBox = document.getElementById("popupDetail");
-        let listHTML = '<strong>Yeni Eklenenler:</strong><ul>';
 
-        data.forEach(item => {
-            listHTML += `<li><span class="badge">NEW</span> <a href="${item.link}">${item.title}</a></li>`;
-        });
-
-        listHTML += '</ul>';
-        detailBox.innerHTML = listHTML;
-    });
