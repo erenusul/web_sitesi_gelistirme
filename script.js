@@ -201,3 +201,31 @@ app.listen(3000, () => console.log('Sunucu 3000 portunda çalışıyor.'));
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.getElementById("lightbox-close");
+
+    document.querySelectorAll(".lightbox-trigger").forEach(img => {
+        img.addEventListener("click", () => {
+            lightboxImg.src = img.src;
+            lightbox.style.display = "flex";
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            lightbox.style.display = "none";
+        }
+    });
+
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    });
+});
